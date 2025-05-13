@@ -6,7 +6,7 @@ from datetime import datetime
 
 # Map extensions to categories and subcategories
 extension_map = {
-    # [Same as before — unchanged]
+    # Images
     '.jpg': ('Images', 'JPG'), '.jpeg': ('Images', 'JPG'), '.png': ('Images', 'PNG'),
     '.gif': ('Images', 'GIF'), '.bmp': ('Images', 'BMP'), '.tiff': ('Images', 'TIFF'), '.webp': ('Images', 'WEBP'),
     '.heic': ('Images', 'HEIC'), '.svg': ('Images', 'SVG'),
