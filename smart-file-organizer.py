@@ -66,6 +66,7 @@ def get_category_and_sub(ext):
     return extension_map.get(ext, ('Others', None))
 
 def organize_and_log(script_dir):
+    script_file = os.path.basename(__file__)
     output_folder = os.path.join(script_dir, 'organized_folder')
     os.makedirs(output_folder, exist_ok=True)
     log_data = []
@@ -75,7 +76,8 @@ def organize_and_log(script_dir):
 
         # Skip this script, the output folder, and non-files
         if (os.path.isfile(src_path)
-            and not src_path.startswith(output_folder)):
+            and not src_path.startswith(output_folder)
+            and file != script_file):
 
             ext = os.path.splitext(file)[1]
             category, subcategory = get_category_and_sub(ext)
